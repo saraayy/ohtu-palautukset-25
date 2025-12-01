@@ -31,13 +31,11 @@ class TennisGame:
         return self.player1_score >= 4 or self.player2_score >= 4
         
     def score_when_advantage_or_win(self):
-        minus_result = self.point_difference()
-
-        if minus_result == 1:
+        if self.point_difference() == 1:
             return "Advantage player1"
-        elif minus_result == -1:
+        elif self.point_difference() == -1:
             return "Advantage player2"
-        elif minus_result >= 2:
+        elif self.point_difference() >= 2:
             return "Win for player1"
         else:
             return "Win for player2"

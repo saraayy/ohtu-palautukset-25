@@ -51,14 +51,7 @@ class TennisGame:
                 score = score + "-"
                 temp_score = self.player2_score
 
-            if temp_score == 0:
-                score = score + "Love"
-            elif temp_score == 1:
-                score = score + "Fifteen"
-            elif temp_score == 2:
-                score = score + "Thirty"
-            elif temp_score == 3:
-                score = score + "Forty"
+            score = score + self.term_point(temp_score)
         return score
     
     def term_point(self, value):
